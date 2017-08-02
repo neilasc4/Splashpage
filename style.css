@@ -4,5 +4,11 @@
 }
 
 body{
-    background-image: url('assets/weather.jpg')
+    background-image: url('assets/weather.jpg');
+}
+
+h5{
+    text-align: center;
+    color: black;
+    font-size:18pt; 
 }
