@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+
+     <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+     <script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+</head>
+<body onload="startTime()">
+
+  <div class="container">
+    <div class="jumbotron">
+      <div class="animated infinite pulse">
+      <h1 style="text-align: center; font-size: 60pt;"><div id="clock"></div></h1>
+      <p style="text-align: center; font-size: 20pt;">PM</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 style="font-size: 30pt; text-align: center;"></h2>
+    <h3 style="font-size: 20pt; text-align: center;"></h3>
+    <h4 style="font-size: 20pt; text-align: center; margin-bottom: 30px;"></h4>
+</div>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-6"><div class="btn-group btn-group-justified">
+  <a href="https://google.com" class="btn btn-primary" style="font-size: 18pt;">Go to Google</a>
+</div></div>
+  <div class="col-md-6"><div class="btn-group btn-group-justified">
+  <a href="https://gmail.com" class="btn btn-primary" style="font-size: 18pt;">Go to Gmail</a></div>
+</div>
+</div>
+
+</body>
+</html>

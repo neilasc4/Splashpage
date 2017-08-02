@@ -1,0 +1,8 @@
+.jumbotron{
+    background-color: lightblue;
+    border: 15px ridge blue;
+}
+
+body{
+    background-image: url('assets/weather.jpg')
+}
