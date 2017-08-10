@@ -1,5 +1,5 @@
 $.ajax({
-    url: 'http://api.wunderground.com/api/2edcb79cf22ddc57/conditions/q/autoip.json',
+    url: 'https://api.wunderground.com/api/2edcb79cf22ddc57/conditions/q/autoip.json',
     dataType: 'json',
     success: function(data){
         var loc = data.current_observation.display_location.full
