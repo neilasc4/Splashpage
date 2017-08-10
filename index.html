@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather</title>
+    <title>New Tab</title>
 
      <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
      <script
-  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 
@@ -37,27 +37,20 @@ function updateClock ( )
   var currentMinutes = currentTime.getMinutes ( );
   var currentSeconds = currentTime.getSeconds ( );
 
-  // Pad the minutes and seconds with leading zeros, if required
   currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
   currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
 
-  // Choose either "AM" or "PM" as appropriate
   var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
 
-  // Convert the hours component to 12-hour format if needed
   currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
 
-  // Convert an hours component of "0" to "12"
   currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 
-  // Compose the string for display
   var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
-  // Update the time display
   document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 }
 
-// -->
 </script>
 
 </head>
@@ -76,10 +69,9 @@ function updateClock ( )
     <b><h2 style="font-size: 30pt; text-align: center; color: black;"></h2></b>
     <b><h3 style="font-size: 20pt; text-align: center; color: black;"></h3></b>
     <b><h4 style="font-size: 20pt; text-align: center; color: black;"></h4></b>
-    <h5 style="margin-bottom: 30pt; margin-top: 20pt;">Google Search:<form method="get" action="https://www.google.com/search">
-<input type="text" name="q" size="31" value="" style="border: 2px solid black;">
-</form></h5>
-</div>
+    <div class="row"><h5 style="margin-bottom: 30pt; margin-top: 20pt;">Google Search:<form method="get" action="https://www.google.com/search">
+<input type="text" name="q" size="31" value="" style="border: 2px solid black; width: 350px;"></form></h5></div>
+    </div>
 
 <div class="container" style="margin-bottom: 18px;">
 <div class="row">
@@ -102,7 +94,6 @@ function updateClock ( )
 </div>
 </div>
 </div>
-
 
 </body>
 </html>
